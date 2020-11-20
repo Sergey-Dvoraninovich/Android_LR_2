@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Таймер</string>
+    <string name="Paused">Paused</string>
+    <string name="Runnig">Running</string>
+    <string name="Finish">Финиш</string>
+    <string name="Save">Сохранить</string>
+    <string name="Title">Заголовок</string>
+    <string name="TotalTime">Время тренировки</string>
+    <string name="NightMode">Ночной режим</string>
+    <string name="Language">Язык</string>
+    <string name="FontSize">Размер шрифта</string>
+    <string name="FontSmall">маленький</string>
+    <string name="FontLarge">большой</string>
+    <string name="DeleteAllTimers">Удалить все таймеры</string>
+</resources>

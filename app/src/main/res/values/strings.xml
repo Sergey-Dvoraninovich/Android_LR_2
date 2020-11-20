@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TimerApp</string>
+    <string name="Paused">Paused</string>
+    <string name="Runnig">Running</string>
+    <string name="Finish">Finish</string>
+    <string name="Save">Save</string>
+    <string name="Title">Title</string>
+    <string name="TotalTime">Total time</string>
+    <string name="NightMode">Dark mode</string>
+    <string name="Language">Language</string>
+    <string name="FontSize">Font size</string>
+    <string name="FontSmall">small</string>
+    <string name="FontLarge">large</string>
+    <string name="DeleteAllTimers">Delete all timers</string>
+</resources>
