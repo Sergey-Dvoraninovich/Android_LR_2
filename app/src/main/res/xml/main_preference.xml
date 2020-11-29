@@ -19,6 +19,6 @@
         app:title="@string/FontSize"
         android:entries="@array/FontSizes"
         android:entryValues="@array/SetValues"
-        android:defaultValue="2"/>
+        android:defaultValue="1"/>
 
 </PreferenceScreen>

@@ -12,4 +12,8 @@
     <string name="FontSmall">small</string>
     <string name="FontLarge">large</string>
     <string name="DeleteAllTimers">Delete all timers</string>
+    <string name="DeleteAllTimersDialog">Do you want to delete all timers?</string>
+    <string name="Confirmation">Confirmation</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Confirm">Confirm</string>
 </resources>

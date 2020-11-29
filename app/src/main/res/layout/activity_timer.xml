@@ -14,7 +14,6 @@
         android:cursorVisible="false"
         android:focusable="false"
         android:longClickable="false"
-        android:text="20"
         android:textSize="200sp"
         app:layout_constraintBottom_toTopOf="@+id/list_create_update"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,4 +86,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/list_create_update"
         app:srcCompat="@mipmap/prev_foreground" />
+
+    <TextView
+        android:id="@+id/timer_set_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

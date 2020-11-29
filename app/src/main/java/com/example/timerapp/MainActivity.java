@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +19,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -37,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setStyle();
         setContentView(R.layout.activity_main);
 
         text = (TextView) findViewById(R.id.test_text);
@@ -45,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         image_add = (ImageView) findViewById(R.id.image_add_timer);
 
         if(timers.size()==0){
-            //dropTimers();
             setTimers();
         }
 
@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        //timersList.setOnContextClickListener(On);
 
         image_add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
         setTimers();
         TimersListAdapter new_adapter = new TimersListAdapter(this, R.layout.item_timer, timers);
         timersList.setAdapter(new_adapter);
-        setStyle();
     }
 
     @Override
@@ -138,18 +136,6 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase db = getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);
         db.execSQL("DROP TABLE IF EXISTS timers");
         db.close();
-    }
-
-    private void setStyle()
-    {
-        SharedPreferences sp = getSharedPreferences("set_night_mode", Context.MODE_PRIVATE);
-        if ((boolean)sp.getBoolean("set_night_mode", false))
-        {
-            this.setTheme(R.style.DarkAppTheme);
-        }
-        else {
-            this.setTheme(R.style.AppTheme);
-        }
     }
 
 }

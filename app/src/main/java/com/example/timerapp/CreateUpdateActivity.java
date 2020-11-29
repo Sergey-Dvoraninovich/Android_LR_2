@@ -37,14 +37,6 @@ public class CreateUpdateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SharedPreferences sp = getSharedPreferences("set_night_mode", Context.MODE_PRIVATE);
-        if ((boolean)sp.getBoolean("set_night_mode", false))
-        {
-            this.setTheme(R.style.DarkAppTheme);
-        }
-        else
-            this.setTheme(R.style.AppTheme);
-        //mediaPlayer = MediaPlayer.create(this, R.raw.full_sound);
         setContentView(R.layout.activity_create_update);
 
         button_save = (Button) findViewById(R.id.button_save);
@@ -53,12 +45,10 @@ public class CreateUpdateActivity extends AppCompatActivity {
 
         timerSet = new TimerSet(20, 30, 10, 40, 3, 2);
         isEdit = false;
-        //string_title.setText("New");
         Bundle arguments = getIntent().getExtras();
         if(arguments!=null) {
             timerSet = (TimerSet) arguments.getSerializable(TimerSet.class.getSimpleName());
             isEdit = true;
-            //string_title.setText("Used");
         }
 
         get_title.setText(timerSet.getTitle());

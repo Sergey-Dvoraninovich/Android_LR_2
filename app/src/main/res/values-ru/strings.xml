@@ -12,4 +12,8 @@
     <string name="FontSmall">маленький</string>
     <string name="FontLarge">большой</string>
     <string name="DeleteAllTimers">Удалить все таймеры</string>
+    <string name="DeleteAllTimersDialog">Вы действительно хотите удалить все таймеры?</string>
+    <string name="Confirmation">Подтверждение</string>
+    <string name="Cancel">Отмена</string>
+    <string name="Confirm">Подтвердить</string>
 </resources>

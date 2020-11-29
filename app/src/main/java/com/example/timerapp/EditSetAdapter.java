@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import javax.xml.namespace.QName;
 
 public class EditSetAdapter  extends ArrayAdapter<ItemSet> {
 
@@ -45,7 +44,6 @@ public class EditSetAdapter  extends ArrayAdapter<ItemSet> {
         }
 
         viewHolder.name.setText(product.name);
-        //viewHolder.number.setText(product.length);
 
         viewHolder.number.setText(length.toString());
 
@@ -56,7 +54,6 @@ public class EditSetAdapter  extends ArrayAdapter<ItemSet> {
                     Integer num = Integer.parseInt(viewHolder.number.getText().toString());
                     if (num > 0)
                         num--;
-                    //product.length = num;
                     ItemSet local_item = itemsList.get(position);
                     local_item.length = num;
                     itemsList.set(position, local_item);
@@ -66,16 +63,12 @@ public class EditSetAdapter  extends ArrayAdapter<ItemSet> {
             }
         });
 
-        //viewHolder.number.setText(product.length);
-
         viewHolder.plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //viewHolder.name.setText(viewHolder.number.toString());
                 try {
                     Integer num = Integer.parseInt(viewHolder.number.getText().toString());
                     num++;
-                    //product.length = num;
                     ItemSet local_item = itemsList.get(position);
                     local_item.length = num;
                     itemsList.set(position, local_item);
@@ -85,7 +78,6 @@ public class EditSetAdapter  extends ArrayAdapter<ItemSet> {
                 {
 
                 }
-                //viewHolder.name.setText("fuf");
             }
         });
 

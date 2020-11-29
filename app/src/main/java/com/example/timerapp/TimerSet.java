@@ -9,7 +9,7 @@ public class TimerSet implements Serializable {
     private int id;
     private String timerSet_text;
 
-    private int warm_up_time;
+    public int warm_up_time;
     private int workout_time;
     private int rest_time;
     private int cooldown_time;

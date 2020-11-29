@@ -44,7 +44,6 @@ public class TimersListAdapter  extends ArrayAdapter<TimerSet> {
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
             convertView.setBackgroundResource(R.drawable.round_corners);
-            //setColors(convertView);
             GradientDrawable drawable = (GradientDrawable) convertView.getBackground();
             int[] colors = cur_timer.getColor();
             drawable.setColor(Color.rgb(colors[0], colors[1], colors[2]));
